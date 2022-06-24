@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.d-flex{
+    border-top: #DFE2E6 solid 1px;
+}
+.footer-category{
+    display: flex;
+    flex-direction: column;
+}
+.footer-category a{
+    text-decoration: none;
+}
