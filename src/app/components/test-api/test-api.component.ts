@@ -2,21 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { NewsapiservicesService } from 'src/app/service/newsapiservices.service';
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  selector: 'app-test-api',
+  templateUrl: './test-api.component.html',
+  styleUrls: ['./test-api.component.css']
 })
-export class BodyComponent implements OnInit {
+export class TestApiComponent implements OnInit {
 
   constructor(private _newsservices:NewsapiservicesService) { }
 
-  newsDisplay:any = [];
+  testApiDisplay:any = [];
 
   ngOnInit(): void {
     this._newsservices.newsAPI()
     .subscribe((result)=>{
       console.log(result);
-      this.newsDisplay = result.articles;     
+      this.testApiDisplay = result.articles;
+      
     })
   }
-  }
+
+}

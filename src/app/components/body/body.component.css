@@ -2,3 +2,55 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.carousel img{
+    height: 450px;
+    width: 600px;
+}
+.btn{
+    background-color: #EF1B48;
+    color:#fff;
+}
+.body-category{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.body-category a{
+    text-decoration: none;
+}
+.body-category p{
+    margin-left: 30px;
+    padding: 7px;
+    background-color: #DFE2E6;
+    color:#000;
+    border-radius: 5px;
+}
+.body-category p:hover{
+    background-color: #EF1B48;
+    color:#fff;
+    transition: ease-in-out .1s;
+}
+.body-latest{
+    display: flex;
+    margin-bottom: 20px;
+}
+.body-latest p{
+    margin-left: 10px;
+}
+.body-latest-headtext{
+    text-align: center;
+    border-bottom: 2px #EF1B48ed solid;
+}
+.body-latest img{
+    width: 150px;
+    min-height: 100px;
+}
+.body-latest img:hover{
+    opacity: 0.8;
+    transition: ease-in-out .3s;
+}
+.body-category-type{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

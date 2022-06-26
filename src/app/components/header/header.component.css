@@ -23,3 +23,8 @@ body{
 .navbar li:hover{
     color:#000;
 }
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
