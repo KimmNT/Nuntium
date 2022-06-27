@@ -125,7 +125,7 @@
         </button>
       </div>
       <!-- Tin tức mới nhất -->
-      <h4 class="body-latest-headtext mb-3">Tin tức mới nhất</h4>
+      <h4 class="body-headtext mb-4">Tin tức mới nhất</h4>
         <div class="row">
           <div *ngFor="let news of newsDisplay" class="body-latest col-md-6">
             <a [routerLink]="['/post']">
@@ -136,23 +136,25 @@
             </p>
           </div>
         </div>
-      <!-- Nested row for non-featured blog posts-->
+      <!-- Phân chia tin tức thành các category cụ thể -->
       <div class="row">
+        <!-- Thể thao-->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin thể thao</h4>
+        </a>
         <div class="body-category-type">
-          <!-- Blog post-->
-          <div *ngFor="let news of newsDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+          <div *ngFor="let newssport of sportHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
             <a [routerLink]="['/post']"
               ><img
                 class="card-img-top"
-                src={{news.urlToImage}}
+                src={{newssport.urlToImage}}
                 alt="..."
             /></a>
             <div class="card-body">
-              <div class="small text-muted">January 1, 2022</div>
-              <h2 class="card-title h4">Post Title</h2>
+              <div class="small text-muted">{{newssport.publishedAt}}</div>
+              <h2 class="card-title h4">{{newssport.title}}</h2>
               <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis aliquid atque, nulla.
+                {{newssport.description}}
               </p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
@@ -160,6 +162,131 @@
             </div>
           </div>
         </div>
+        <!-- Tin sức khoẻ -->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin sức khoẻ</h4>
+        </a>
+        <div class="body-category-type">
+          <div *ngFor="let newshealth of healthHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+            <a [routerLink]="['/post']"
+              ><img
+                class="card-img-top"
+                src={{newshealth.urlToImage}}
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <div class="small text-muted">{{newshealth.publishedAt}}</div>
+              <h2 class="card-title h4">{{newshealth.title}}</h2>
+              <p class="card-text">
+                {{newshealth.description}}
+              </p>
+              <a class="btn btn-primary" [routerLink]="['/post']"
+                >Read more →</a
+              >
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tin kinh doanh -->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin kinh doanh</h4>
+        </a>
+        <div class="body-category-type">
+          <div *ngFor="let newsbuss of bussinessHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+            <a [routerLink]="['/post']"
+              ><img
+                class="card-img-top"
+                src={{newsbuss.urlToImage}}
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <div class="small text-muted">{{newsbuss.publishedAt}}</div>
+              <h2 class="card-title h4">{{newsbuss.title}}</h2>
+              <p class="card-text">
+                {{newsbuss.description}}
+              </p>
+              <a class="btn btn-primary" [routerLink]="['/post']"
+                >Read more →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tin giải trí-->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin giải trí</h4>
+        </a>
+        <div class="body-category-type">
+          <div *ngFor="let newsenter of entertainmentHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+            <a [routerLink]="['/post']"
+              ><img
+                class="card-img-top"
+                src={{newsenter.urlToImage}}
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <div class="small text-muted">{{newsenter.publishedAt}}</div>
+              <h2 class="card-title h4">{{newsenter.title}}</h2>
+              <p class="card-text">
+                {{newsenter.description}}
+              </p>
+              <a class="btn btn-primary" [routerLink]="['/post']"
+                >Read more →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tin khoa học-->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin khoa học</h4>
+        </a>
+        <div class="body-category-type">
+          <div *ngFor="let newsscience of scienceHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+            <a [routerLink]="['/post']"
+              ><img
+                class="card-img-top"
+                src={{newsscience.urlToImage}}
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <div class="small text-muted">{{newsscience.publishedAt}}</div>
+              <h2 class="card-title h4">{{newsscience.title}}</h2>
+              <p class="card-text">
+                {{newsscience.description}}
+              </p>
+              <a class="btn btn-primary" [routerLink]="['/post']"
+                >Read more →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tin công nghệ-->
+        <a href="">
+          <h4 class="body-headtext mb-4">Tin công nghệ</h4>
+        </a>
+        <div class="body-category-type">
+          <div *ngFor="let newstech of techHomeDisplay" class="card col-md-6 mb-4" style="width: 25rem;">
+            <a [routerLink]="['/post']"
+              ><img
+                class="card-img-top"
+                src={{newstech.urlToImage}}
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <div class="small text-muted">{{newstech.publishedAt}}</div>
+              <h2 class="card-title h4">{{newstech.title}}</h2>
+              <p class="card-text">
+                {{newstech.description}}
+              </p>
+              <a class="btn btn-primary" [routerLink]="['/post']"
+                >Read more →</a
+              >
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

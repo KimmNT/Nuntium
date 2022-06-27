@@ -10,13 +10,51 @@ export class BodyComponent implements OnInit {
 
   constructor(private _newsservices:NewsapiservicesService) { }
 
+  // khai báo ARRAY để nhận giá trị trả về từ object
   newsDisplay:any = [];
+  sportHomeDisplay:any = [];
+  healthHomeDisplay:any = [];
+  bussinessHomeDisplay:any = [];
+  entertainmentHomeDisplay:any = [];
+  scienceHomeDisplay:any = [];
+  techHomeDisplay:any = [];
 
+  // đăng ký ARRAY, thực hiện nhận giá trị trả về từ object chuyển thành chuỗi
   ngOnInit(): void {
     this._newsservices.newsAPI()
     .subscribe((result)=>{
       console.log(result);
       this.newsDisplay = result.articles;     
+    })
+    this._newsservices.sportHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.sportHomeDisplay = result.articles;  
+    })
+    this._newsservices.healthHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.healthHomeDisplay = result.articles;  
+    })
+    this._newsservices.bussinessHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.bussinessHomeDisplay = result.articles; 
+    })
+    this._newsservices.entertainmentHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.entertainmentHomeDisplay = result.articles; 
+    })
+    this._newsservices.scienceHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.scienceHomeDisplay = result.articles; 
+    })
+    this._newsservices.techHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.techHomeDisplay = result.articles; 
     })
   }
   }

@@ -11,6 +11,7 @@ import { NewsDetailComponent } from './components/news-detail/news-detail.compon
 import { CommonModule } from '@angular/common';
 import { TestApiComponent } from './components/test-api/test-api.component';
 import { NewsapiservicesService } from './service/newsapiservices.service';
+import { SideWidgetsComponent } from './components/side-widgets/side-widgets.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { NewsapiservicesService } from './service/newsapiservices.service';
     FooterComponent,
     BodyComponent,
     NewsDetailComponent,
-    TestApiComponent
+    TestApiComponent,
+    SideWidgetsComponent
   ],
   imports: [
     BrowserModule,
