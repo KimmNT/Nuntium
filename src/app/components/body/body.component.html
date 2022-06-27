@@ -42,6 +42,30 @@
           easy to use, and feature the Bootstrap 5 card component!
         </div>
       </div>
+      <!-- BBC news widgets -->
+      <div class="card mb-4">
+        <div class="card-header">BBC News</div>
+        <div *ngFor="let bbc of bbcHomeDisplay" class="body-side-news">
+          <img src={{bbc.urlToImage}} alt="">
+          <p>{{bbc.title}}</p>
+        </div>
+      </div>
+      <!-- ABC news widgets -->
+      <div class="card mb-4">
+        <div class="card-header">ABC News</div>
+        <div *ngFor="let abc of abcHomeDisplay" class="body-side-news">
+          <img src={{abc.urlToImage}} alt="">
+          <p>{{abc.title}}</p>
+        </div>
+      </div>
+      <!-- Bitcoin news widgets -->
+      <div class="card mb-4">
+        <div class="card-header">Bitcoin News</div>
+        <div *ngFor="let bitcoin of bitcoinHomeDisplay" class="body-side-news">
+          <img src={{bitcoin.urlToImage}} alt="">
+          <p>{{bitcoin.title}}</p>
+        </div>
+      </div>
     </div>
     <!-- Blog entries-->
     <div class="col-lg-8">
@@ -156,6 +180,7 @@
               <p class="card-text">
                 {{newssport.description}}
               </p>
+              <p>{{newssport.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >
@@ -180,6 +205,7 @@
               <p class="card-text">
                 {{newshealth.description}}
               </p>
+              <p>{{newshealth.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >
@@ -205,6 +231,7 @@
               <p class="card-text">
                 {{newsbuss.description}}
               </p>
+              <p>{{newsbuss.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >
@@ -230,6 +257,7 @@
               <p class="card-text">
                 {{newsenter.description}}
               </p>
+              <p>{{newsenter.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >
@@ -255,6 +283,7 @@
               <p class="card-text">
                 {{newsscience.description}}
               </p>
+              <p>{{newsscience.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >
@@ -280,6 +309,7 @@
               <p class="card-text">
                 {{newstech.description}}
               </p>
+              <p>{{newstech.publishedAt}}</p>
               <a class="btn btn-primary" [routerLink]="['/post']"
                 >Read more →</a
               >

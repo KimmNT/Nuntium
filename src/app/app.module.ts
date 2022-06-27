@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { TestApiComponent } from './components/test-api/test-api.component';
 import { NewsapiservicesService } from './service/newsapiservices.service';
 import { SideWidgetsComponent } from './components/side-widgets/side-widgets.component';
+import { SafePipe } from './safe.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { SideWidgetsComponent } from './components/side-widgets/side-widgets.com
     BodyComponent,
     NewsDetailComponent,
     TestApiComponent,
-    SideWidgetsComponent
+    SideWidgetsComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

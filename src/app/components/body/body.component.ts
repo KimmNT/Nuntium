@@ -18,6 +18,9 @@ export class BodyComponent implements OnInit {
   entertainmentHomeDisplay:any = [];
   scienceHomeDisplay:any = [];
   techHomeDisplay:any = [];
+  bbcHomeDisplay:any = [];
+  abcHomeDisplay:any = [];
+  bitcoinHomeDisplay:any = [];
 
   // đăng ký ARRAY, thực hiện nhận giá trị trả về từ object chuyển thành chuỗi
   ngOnInit(): void {
@@ -55,6 +58,21 @@ export class BodyComponent implements OnInit {
     .subscribe((result)=>{
       console.log(result);
       this.techHomeDisplay = result.articles; 
+    })
+    this._newsservices.bccHomme()
+    .subscribe((result)=>{
+      console.log(result);
+      this.bbcHomeDisplay = result.articles; 
+    })
+    this._newsservices.abcHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.abcHomeDisplay = result.articles; 
+    })
+    this._newsservices.bitcoinHome()
+    .subscribe((result)=>{
+      console.log(result);
+      this.bitcoinHomeDisplay = result.articles; 
     })
   }
   }

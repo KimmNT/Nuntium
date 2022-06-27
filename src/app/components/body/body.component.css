@@ -30,6 +30,18 @@ a{
     color:#fff;
     transition: ease-in-out .1s;
 }
+.body-side-news img{
+    width: 200px;
+    height: 80px;
+}
+.body-side-news p{
+    margin-left: 10px;
+}
+.body-side-news{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
 .body-latest{
     display: flex;
     margin-bottom: 20px;
